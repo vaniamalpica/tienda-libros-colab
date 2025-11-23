@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tienda de Libros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Tienda de Libros Online</h1>
+    <nav>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#carrito">Carrito</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<main>
+    <section id="catalogo">
+        <h2>Catálogo de libros</h2>
+        <div class="libros">
+            <article class="libro" data-id="1">
+    <img src="img/orgulloyprejuicio.jpg" alt="Orgullo y Prejuicio">
+    <h3>Orgullo Y Prejuicio</h3>
+    <p class="autor">Jane Austen</p>
+    <p class="precio">$470</p>
+    <button class="btn-agregar">Agregar al carrito</button>
+</article>
+
+<article class="libro" data-id="2">
+    <img src="img/boulevard.jpg" alt="Boulevard">
+    <h3>Boulevard</h3>
+    <p class="autor">Flor M. Salvador</p>
+    <p class="precio">$349</p>
+    <button class="btn-agregar">Agregar al carrito</button>
+</article>
+
+<article class="libro" data-id="3">
+    <img src="img/estrella.jpg" alt="Bajo La Misma Estrella">
+    <h3>Bajo La Misma Estrella</h3>
+    <p class="autor">John Green</p>
+    <p class="precio">$400</p>
+    <button class="btn-agregar">Agregar al carrito</button>
+</article>
+
+        </div>
+    </section>
+
+    <section id="carrito">
+        <h2>Carrito</h2>
+        <ul id="lista-carrito"></ul>
+        <p id="total">Total: $0</p>
+        <button id="btn-vaciar">Vaciar carrito</button>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="form-contacto">
+            <label>
+                Nombre:
+                <input type="text" id="nombre" required>
+            </label>
+            <label>
+                Correo:
+                <input type="email" id="correo" required>
+            </label>
+            <label>
+                Mensaje:
+                <textarea id="mensaje" required></textarea>
+            </label>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="mensaje-estado"></p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Tienda de Libros. Todos los derechos reservados.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
