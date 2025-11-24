@@ -11,6 +11,12 @@ const btnVaciar = document.getElementById("btn-vaciar");
 const formContacto = document.getElementById("form-contacto");
 const mensajeEstado = document.getElementById("mensaje-estado");
 
+const contadorCarrito = document.getElementById("contador-carrito");
+
+function actualizarContador() {
+    contadorCarrito.textContent = carrito.length;
+}
+
 document.querySelectorAll(".btn-agregar").forEach(boton => {
     boton.addEventListener("click", () => {
         const articulo = boton.closest(".libro");
@@ -24,6 +30,8 @@ document.querySelectorAll(".btn-agregar").forEach(boton => {
 btnVaciar.addEventListener("click", () => {
     carrito = [];
     renderCarrito();
+    actualizarContador();
+
 });
 
 function renderCarrito() {
